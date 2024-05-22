@@ -44,11 +44,11 @@ Análisis y Diseño del proyecto (pseudocódigo)
   - GitHub: https://github.com/MacielBarbero
 
 - Integrante 6:
-  - Nombre: Emilce 
-  - Apellido: Robles
+  - Nombre:  
+  - Apellido: 
   - DNI: [DNI6]
-  - Correo Electrónico:  emi.nrobles@gmail.com
-  - GitHub: https://github.com/emirobles  
+  - Correo Electrónico:  
+  - GitHub: 
 
 # Descripción de la Propuesta del Proyecto
 
