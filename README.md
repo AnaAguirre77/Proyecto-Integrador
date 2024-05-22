@@ -18,7 +18,7 @@ Análisis y Diseño del proyecto (pseudocódigo)
 - Integrante 2:
   - Nombre: Alan 
   - Apellido: García Pagliardini
-  - DNI: [DNI2]
+  - DNI: 35.917.637
   - Correo Electrónico: alan.gpagliardini@gmail.com
   - GitHub: https://github.com/pagliardini
 
