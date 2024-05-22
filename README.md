@@ -11,7 +11,7 @@ Análisis y Diseño del proyecto (pseudocódigo)
 - Integrante 1:
   - Nombre: Ana Luz 
   - Apellido: Aguirre
-  - DNI: [DNI1]
+  - DNI: 43.188.563
   - Correo Electrónico: aguirreluzana5f@gmail.com
   - GitHub: https://github.com/AnaAguirre77
 
