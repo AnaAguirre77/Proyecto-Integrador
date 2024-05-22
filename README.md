@@ -32,14 +32,14 @@ Análisis y Diseño del proyecto (pseudocódigo)
 - Integrante 4:
   - Nombre: Fabián 
   - Apellido: Monar
-  - DNI: 95.850.539
+  - DNI: [DNI4]
   - Correo Electrónico: fabian.monar.u@gmail.com
   - GitHub: https://github.com/fabianmonar
 
 - Integrante 5:
   - Nombre: Maciel 
   - Apellido: Barbero
-  - DNI: [DNI5]
+  - DNI: 35144709
   - Correo Electrónico: m8barbero@gmail.com
   - GitHub: https://github.com/MacielBarbero
 
