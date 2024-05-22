@@ -39,7 +39,7 @@ Análisis y Diseño del proyecto (pseudocódigo)
 - Integrante 5:
   - Nombre: Maciel 
   - Apellido: Barbero
-  - DNI: [DNI5]
+  - DNI: 35144709
   - Correo Electrónico: m8barbero@gmail.com
   - GitHub: https://github.com/MacielBarbero
 
