@@ -51,6 +51,11 @@ Análisis y Diseño del proyecto (pseudocódigo)
   - GitHub: 
 
 # Descripción de la Propuesta del Proyecto
+El proyecto consiste en desarrollar un sistema de control de stock para una tienda de mascotas. Este sistema permitirá gestionar información sobre sucursales, productos, pedidos y proveedores.
+
+Los usuarios podrán acceder al sistema para ver el inventario disponible en cada sucursal, realizar pedidos de productos, mantener actualizada la información de los proveedores y gestionar el stock de productos en las diferentes ubicaciones de la tienda.
+
+El sistema estará diseñado para ser fácil de usar y eficiente, permitiendo una gestión efectiva del inventario y asegurando que los productos estén disponibles cuando los clientes los necesiten.
 
 # Análisis y Diseño del Proyecto
 
