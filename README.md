@@ -33,16 +33,16 @@
 - Integrante 5:
   - Nombre: Maciel 
   - Apellido: Barbero
-  - DNI: 35144709
+  - DNI: 35.144.709
   - Correo Electrónico: m8barbero@gmail.com
   - GitHub: https://github.com/MacielBarbero
 
 - Integrante 6:
-  - Nombre:  
-  - Apellido: 
-  - DNI: [DNI6]
-  - Correo Electrónico:  
-  - GitHub: 
+  - Nombre: Fernando
+  - Apellido: Garcia
+  - DNI: 27.543.121
+  - Correo Electrónico: fer_spilberg@hotmail.com
+  - GitHub: https://github.com/Kiefer543
 
 # Descripción de la Propuesta del Proyecto
 El proyecto consiste en desarrollar un sistema de control de stock para una tienda de mascotas. Este sistema permitirá gestionar información sobre sucursales, productos, pedidos y proveedores.
