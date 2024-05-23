@@ -58,5 +58,41 @@ Los usuarios podrán acceder al sistema para ver el inventario disponible en cad
 El sistema estará diseñado para ser fácil de usar y eficiente, permitiendo una gestión efectiva del inventario y asegurando que los productos estén disponibles cuando los clientes los necesiten.
 
 # Análisis y Diseño del Proyecto
+Para diseñar el menú principal y la primera interacción del usuario con el sistema de control de stock para la tienda de mascotas, es importante tener en cuenta varios aspectos. 
 
+1. Facilidad de uso: El menú principal debe ser intuitivo y fácil de entender para que los usuarios puedan navegar por las diferentes opciones sin dificultad.
+
+2. Acceso rápido a las funciones principales: El menú principal debe proporcionar acceso rápido a las funciones más utilizadas, como la gestión de sucursales, productos, pedidos y proveedores.
+
+3. Organización lógica: Las opciones del menú deben estar organizadas de manera lógica y coherente, agrupando funciones relacionadas para facilitar la navegación.
+
+4. Información clara: Cada opción del menú debe estar acompañada de una descripción clara para que los usuarios comprendan qué hace cada función aprimera vista.
+   
 ## Pseudocódigo General
+Mostrar "Menú Principal:"
+    Mostrar "1. Gestión de Sucursales"
+    Mostrar "2. Gestión de Productos"
+    Mostrar "3. Realizar Pedido"
+    Mostrar "4. Gestión de Proveedores"
+    Mostrar "5. Salir"
+    
+    Leer opción
+    
+    Si opción es igual a 1:
+        // Llamar a la función para gestionar sucursales
+        gestionarSucursales()
+    
+    Si opción es igual a 2:
+        // Llamar a la función para gestionar productos
+        gestionarProductos()
+    
+    Si opción es igual a 3:
+        // Llamar a la función para realizar un pedido
+        realizarPedido()
+    
+    Si opción es igual a 4:
+        // Llamar a la función para gestionar proveedores
+        gestionarProveedores()
+    
+    Si opción es igual a 5:
+        Salir del programa
