@@ -63,10 +63,10 @@ Para diseñar el menú principal y la primera interacción del usuario con el si
 4. Información clara: Cada opción del menú debe estar acompañada de una descripción clara para que los usuarios comprendan qué hace cada función aprimera vista.
    
 ## Pseudocódigo General
-Mostrar "Menú Principal:"
+    Mostrar "Menú Principal:"
     Mostrar "1. Gestión de Sucursales"
     Mostrar "2. Gestión de Productos"
-    Mostrar "3. Realizar Pedido"
+    Mostrar "3. Ventas"
     Mostrar "4. Gestión de Proveedores"
     Mostrar "5. Salir"
     
