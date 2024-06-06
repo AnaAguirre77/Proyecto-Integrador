@@ -93,7 +93,7 @@ Este es un sistema modularizado para gestionar sucursales, productos, ventas y p
 
 ### main.py
 
-Este archivo contiene el menú principal de la aplicación y las funciones para gestionar las diferentes entidades.
+Este archivo contiene el menú principal de la aplicación y las funcionalidades para gestionar las diferentes entidades.
 
 - menu_principal(): Función para mostrar el menú principal y gestionar las diferentes entidades.
 
