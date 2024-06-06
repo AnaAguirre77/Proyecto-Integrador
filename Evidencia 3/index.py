@@ -1,10 +1,10 @@
-# Importar las funciones de los otros archivos
 from sucursales import gestionar_sucursales
 from productos import gestionar_productos
-from proveedores import gestionar_proveedores
 from ventas import gestionar_ventas
+from proveedores import gestionar_proveedores
+from detalle_ventas import gestionar_detalle_ventas
+from categorias_productos import gestionar_categorias
 
-# Función para mostrar el menú principal y gestionar las entidades
 def menu_principal():
     while True:
         print("Bienvenido al Sistema de Control de Stock")
@@ -12,7 +12,9 @@ def menu_principal():
         print("2. Gestionar Productos")
         print("3. Gestionar Ventas")
         print("4. Gestionar Proveedores")
-        print("5. Salir")
+        print("5. Gestionar Detalle de Ventas")
+        print("6. Gestionar Categorías de Productos")
+        print("7. Salir")
         opcion = input("Ingrese una opción: ")
 
         if opcion == "1":
@@ -24,10 +26,14 @@ def menu_principal():
         elif opcion == "4":
             gestionar_proveedores()
         elif opcion == "5":
+            gestionar_detalle_ventas()
+        elif opcion == "6":
+            gestionar_categorias()
+        elif opcion == "7":
             print("¡Hasta luego!")
             break
         else:
             print("Opción inválida. Por favor, seleccione una opción válida.")
 
-# Llama a la función principal del menú
-menu_principal()
+if __name__ == "__main__":
+    menu_principal()
