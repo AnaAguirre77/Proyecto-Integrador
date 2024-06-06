@@ -87,36 +87,61 @@ Para diseñar el menú principal y la primera interacción del usuario con el si
         
 # Sistema de Control de Stock
 
-Este es un sistema modularizado para gestionar sucursales, productos, ventas y proveedores.
+Este es un sistema modularizado para gestionar sucursales, productos, ventas, proveedores, detalle de ventas y categorías de productos.
 
 ## Archivos
 
-### main.py
+### index.py
 
 Este archivo contiene el menú principal de la aplicación y las funcionalidades para gestionar las diferentes entidades.
 
-- menu_principal(): Función para mostrar el menú principal y gestionar las diferentes entidades.
+- **menu_principal()**: Función para mostrar el menú principal y gestionar las diferentes entidades.
 
 ### productos.py
 
 Este archivo contiene las funciones para gestionar los productos.
 
-- gestionar_productos(): Función para gestionar los productos.
+- **gestionar_productos()**: Función para gestionar los productos.
 
 ### sucursales.py
 
 Este archivo contiene las funciones para gestionar las sucursales.
 
-- gestionar_sucursales(): Función para gestionar las sucursales.
+- **gestionar_sucursales()**: Función para gestionar las sucursales.
 
 ### ventas.py
 
 Este archivo contiene las funciones para gestionar las ventas.
 
-- gestionar_ventas(): Función para gestionar las ventas.
+- **gestionar_ventas()**: Función para gestionar las ventas.
 
 ### proveedores.py
 
 Este archivo contiene las funciones para gestionar los proveedores.
 
 - **gestionar_proveedores()**: Función para gestionar los proveedores.
+
+### detalle_ventas.py
+
+Este archivo contiene las funciones para gestionar el detalle de las ventas.
+
+- **gestionar_detalle_ventas()**: Función para gestionar el detalle de las ventas.
+
+### categorias_productos.py
+
+Este archivo contiene las funciones para gestionar las categorías de los productos.
+
+- **gestionar_categorias()**: Función para gestionar las categorías de los productos.
+
+## Estructura de Archivos
+
+Evidencia 3
+├── index.py
+├── productos.py
+├── proveedores.py
+├── sucursales.py
+├── ventas.py
+├── detalle_ventas.py
+└── categorias_productos.py
+
+
