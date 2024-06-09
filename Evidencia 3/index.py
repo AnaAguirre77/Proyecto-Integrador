@@ -3,7 +3,7 @@ from productos import gestionar_productos
 from ventas import gestionar_ventas
 from proveedores import gestionar_proveedores
 from detalle_ventas import gestionar_detalle_ventas
-from categorias_productos import gestionar_categorias
+from categoria_productos import gestionar_categorias
 
 def menu_principal():
     while True:
