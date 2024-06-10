@@ -129,7 +129,7 @@ Este archivo contiene las funciones para gestionar el detalle de las ventas.
 
 ### categorias_productos.py
 
-Este archivo contiene las funciones para gestionar las categorías de los productos.
+Este archivo contiene las funciones que gestiona las categorías de los productos.
 
 - **gestionar_categorias()**: Función para gestionar las categorías de los productos.
 
