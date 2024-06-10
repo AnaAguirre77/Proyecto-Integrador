@@ -1,4 +1,4 @@
-productos = []
+from db import execute_query, fetch_query
 
 def gestionar_productos():
     while True:
@@ -21,36 +21,36 @@ def gestionar_productos():
             print("Opción inválida. Por favor, seleccione una opción válida.")
 
 def mostrar_productos():
-    print("Productos:")
+    query = "SELECT * FROM Productos"
+    productos = fetch_query(query)
+    print("\nLista de Productos:")
     for producto in productos:
-        print(producto)
+        print(f"Código de Barras: {producto[0]}, Nombre: {producto[1]}, Precio Unitario: {producto[2]}, Stock: {producto[3]}, ID Categoría: {producto[4]}, Descripción: {producto[5]}, CUIT Proveedor: {producto[6]}")
+    print()
 
 def añadir_producto():
+    codigo_de_barras = input("Ingrese el código de barras del producto: ")
     nombre = input("Ingrese el nombre del producto: ")
-    precio = float(input("Ingrese el precio del producto: "))
-    id_sucursal = input("Ingrese el ID de la sucursal: ")
-    id_proveedor = input("Ingrese el ID del proveedor: ")
-    categoria = input("Ingrese la categoría del producto: ")
+    precio_unitario = input("Ingrese el precio unitario del producto: ")
+    stock = input("Ingrese el stock del producto: ")
+    id_categoria = input("Ingrese el ID de la categoría del producto: ")
     descripcion = input("Ingrese la descripción del producto: ")
-    codigo_barras = input("Ingrese el código de barras del producto: ")
-    nuevo_producto = {
-        "nombre": nombre,
-        "precio": precio,
-        "id_sucursal": id_sucursal,
-        "id_proveedor": id_proveedor,
-        "categoria": categoria,
-        "descripcion": descripcion,
-        "codigo_barras": codigo_barras
-    }
-    productos.append(nuevo_producto)
-    print("Producto añadido correctamente.")
+    cuit_proveedor = input("Ingrese el CUIT del proveedor del producto: ")
+
+    query = """
+    INSERT INTO Productos (Codigo_de_barras, Nombre, Precio_Unitario, Stock, ID_Categoria, Descripcion, CUIT_Proveedor)
+    VALUES (%s, %s, %s, %s, %s, %s, %s)
+    """
+    params = (codigo_de_barras, nombre, precio_unitario, stock, id_categoria, descripcion, cuit_proveedor)
+    execute_query(query, params)
+    print("Producto añadido con éxito.\n")
 
 def eliminar_producto():
-    nombre = input("Ingrese el nombre del producto a eliminar: ")
-    for producto in productos:
-        if producto["nombre"] == nombre:
-            productos.remove(producto)
-            print("Producto eliminado correctamente.")
-            break
-    else:
-        print("No se encontró el producto.")
+    codigo_de_barras = input("Ingrese el código de barras del producto a eliminar: ")
+    query = "DELETE FROM Productos WHERE Codigo_de_barras = %s"
+    params = (codigo_de_barras,)
+    execute_query(query, params)
+    print("Producto eliminado con éxito.\n")
+
+if __name__ == "__main__":
+    gestionar_productos()

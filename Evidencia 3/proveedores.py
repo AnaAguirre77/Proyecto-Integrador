@@ -1,4 +1,4 @@
-proveedores = []
+from db import execute_query, fetch_query
 
 def gestionar_proveedores():
     while True:
@@ -21,23 +21,47 @@ def gestionar_proveedores():
             print("Opción inválida. Por favor, seleccione una opción válida.")
 
 def mostrar_proveedores():
+    query = "SELECT CUIT_Proveedor, Nombre, Apellido, Telefono FROM Proveedores"
+    proveedores = fetch_query(query)
     print("Proveedores:")
     for proveedor in proveedores:
-        print(proveedor)
+        print(f"CUIT: {proveedor[0]}, Nombre: {proveedor[1]}, Apellido: {proveedor[2]}, Teléfono: {proveedor[3]}")
 
 def añadir_proveedor():
+    cuit_proveedor = input("Ingrese el CUIT del proveedor: ")
     nombre = input("Ingrese el nombre del proveedor: ")
-    contacto = input("Ingrese el contacto del proveedor: ")
-    nuevo_proveedor = {"nombre": nombre, "contacto": contacto}
-    proveedores.append(nuevo_proveedor)
-    print("Proveedor añadido correctamente.")
+    apellido = input("Ingrese el apellido del proveedor: ")
+    telefono = input("Ingrese el teléfono del proveedor: ")
+    
+    query = """
+    INSERT INTO Proveedores (CUIT_Proveedor, Nombre, Apellido, Telefono)
+    VALUES (%s, %s, %s, %s)
+    """
+    params = (cuit_proveedor, nombre, apellido, telefono)
+    
+    try:
+        execute_query(query, params)
+        print("Proveedor añadido correctamente.")
+    except mysql.connector.Error as err:
+        print(f"Error al añadir proveedor: {err}")
 
 def eliminar_proveedor():
-    nombre = input("Ingrese el nombre del proveedor a eliminar: ")
-    for proveedor in proveedores:
-        if proveedor["nombre"] == nombre:
-            proveedores.remove(proveedor)
-            print("Proveedor eliminado correctamente.")
-            break
-    else:
-        print("No se encontró el proveedor.")
+    cuit_proveedor = input("Ingrese el CUIT del proveedor a eliminar: ")
+    
+    # Verificar si el proveedor existe
+    query_check = "SELECT COUNT(*) FROM Proveedores WHERE CUIT_Proveedor = %s"
+    params_check = (cuit_proveedor,)
+    proveedor_existe = fetch_query(query_check, params_check)[0][0]
+
+    if proveedor_existe == 0:
+        print("Error: El proveedor con el CUIT especificado no existe.")
+        return
+    
+    query = "DELETE FROM Proveedores WHERE CUIT_Proveedor = %s"
+    params = (cuit_proveedor,)
+    
+    try:
+        execute_query(query, params)
+        print("Proveedor eliminado correctamente.")
+    except mysql.connector.Error as err:
+        print(f"Error al eliminar proveedor: {err}")
