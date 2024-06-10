@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `Proveedores` (
   `CUIT_Proveedor` INT NOT NULL,
   `Nombre` VARCHAR(45) NULL,
   `Apellido` VARCHAR(45) NOT NULL,
-  `Telefono` INT NOT NULL,
+  `Telefono` VARCHAR(25) NOT NULL,
   PRIMARY KEY (`CUIT_Proveedor`))
 ENGINE = InnoDB;
 
