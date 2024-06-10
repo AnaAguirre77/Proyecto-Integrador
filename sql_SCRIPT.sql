@@ -115,7 +115,6 @@ CREATE TABLE IF NOT EXISTS `Producto_Sucursal_Stock` (
   `Cantidad_Stock` INT NOT NULL,
   INDEX `fk_Producto_Sucursal_Stock_Sucursales1_idx` (`ID_Sucursal` ASC),
   INDEX `fk_Producto_Sucursal_Stock_Productos1_idx` (`Codigo_de_barras` ASC),
-  PRIMARY KEY (`Codigo_de_barras`, `ID_Sucursal`),
   CONSTRAINT `fk_Producto_Sucursal_Stock_Sucursales1`
     FOREIGN KEY (`ID_Sucursal`)
     REFERENCES `Sucursales` (`ID_Sucursal`)
