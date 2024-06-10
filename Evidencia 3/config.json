@@ -1,0 +1,6 @@
+{
+    "host": "localhost",
+    "user": "adminps",
+    "passwd": "adminps",
+    "database": "petShop"
+}

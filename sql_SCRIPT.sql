@@ -11,9 +11,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- Schema petShop
 -- -----------------------------------------------------
 
--- -----------------------------------------------------
--- Schema petShop
--- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `petShop` DEFAULT CHARACTER SET utf8 ;
 USE `petShop` ;
 
@@ -28,17 +25,15 @@ CREATE TABLE IF NOT EXISTS `petShop`.`Proveedores` (
   PRIMARY KEY (`CUIT_Proveedor`))
 ENGINE = InnoDB;
 
-
 -- -----------------------------------------------------
 -- Table `petShop`.`Categoria`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `petShop`.`Categoria` (
-  `ID_Categoria` INT NOT NULL,
+  `ID_Categoria` INT NOT NULL AUTO_INCREMENT,
   `Nombre` VARCHAR(45) NOT NULL,
   `Descripcion` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_Categoria`))
 ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `petShop`.`Productos`
@@ -51,9 +46,9 @@ CREATE TABLE IF NOT EXISTS `petShop`.`Productos` (
   `ID_Categoria` INT NOT NULL,
   `Descripcion` VARCHAR(45) NOT NULL,
   `CUIT_Proveedor` INT NOT NULL,
-  PRIMARY KEY (`Codigo_de_barras`, `CUIT_Proveedor`, `ID_Categoria`),
-  INDEX `fk_Productos_Proveedores_idx` (`CUIT_Proveedor` ASC) VISIBLE,
-  INDEX `fk_Productos_Categoria1_idx` (`ID_Categoria` ASC) VISIBLE,
+  PRIMARY KEY (`Codigo_de_barras`),
+  INDEX `fk_Productos_Proveedores_idx` (`CUIT_Proveedor` ASC),
+  INDEX `fk_Productos_Categoria1_idx` (`ID_Categoria` ASC),
   CONSTRAINT `fk_Productos_Proveedores`
     FOREIGN KEY (`CUIT_Proveedor`)
     REFERENCES `petShop`.`Proveedores` (`CUIT_Proveedor`)
@@ -66,12 +61,11 @@ CREATE TABLE IF NOT EXISTS `petShop`.`Productos` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-
 -- -----------------------------------------------------
 -- Table `petShop`.`Ventas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `petShop`.`Ventas` (
-  `ID_Venta` INT NOT NULL,
+  `ID_Venta` INT NOT NULL AUTO_INCREMENT,
   `Fecha` DATETIME NOT NULL,
   `Forma_Pago` VARCHAR(45) NULL,
   `Descuento` DECIMAL(5,2) NULL,
@@ -79,7 +73,6 @@ CREATE TABLE IF NOT EXISTS `petShop`.`Ventas` (
   `ID_Sucursal` INT NOT NULL,
   PRIMARY KEY (`ID_Venta`))
 ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `petShop`.`Detalle_Ventas`
@@ -89,10 +82,10 @@ CREATE TABLE IF NOT EXISTS `petShop`.`Detalle_Ventas` (
   `Codigo_de_barras` INT NOT NULL,
   `Cantidad_Unidades` INT NOT NULL,
   `Precio_Unitario` DECIMAL(10,2) NOT NULL,
-  `Descuento` DECIMAL(5,2) NOT NULL,
+  `Descuento` DECIMAL(5,2) NULL,
   `Total_Item` DECIMAL(10,2) NOT NULL,
-  INDEX `fk_Detalle_Ventas_Productos1_idx` (`Codigo_de_barras` ASC) VISIBLE,
-  INDEX `fk_Detalle_Ventas_Ventas1_idx` (`ID_Venta` ASC) VISIBLE,
+  INDEX `fk_Detalle_Ventas_Productos1_idx` (`Codigo_de_barras` ASC),
+  INDEX `fk_Detalle_Ventas_Ventas1_idx` (`ID_Venta` ASC),
   PRIMARY KEY (`ID_Venta`, `Codigo_de_barras`),
   CONSTRAINT `fk_Detalle_Ventas_Productos1`
     FOREIGN KEY (`Codigo_de_barras`)
@@ -106,19 +99,17 @@ CREATE TABLE IF NOT EXISTS `petShop`.`Detalle_Ventas` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-
 -- -----------------------------------------------------
 -- Table `petShop`.`Sucursales`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `petShop`.`Sucursales` (
-  `ID_Sucursal` INT NOT NULL,
+  `ID_Sucursal` INT NOT NULL AUTO_INCREMENT,
   `Ciudad` VARCHAR(45) NOT NULL,
   `Direccion` VARCHAR(45) NOT NULL,
   `Telefono` INT NOT NULL,
   `Email` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_Sucursal`))
 ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `petShop`.`Producto_Sucursal_Stock`
@@ -127,8 +118,8 @@ CREATE TABLE IF NOT EXISTS `petShop`.`Producto_Sucursal_Stock` (
   `Codigo_de_barras` INT NOT NULL,
   `ID_Sucursal` INT NOT NULL,
   `Cantidad_Stock` INT NOT NULL,
-  INDEX `fk_Producto_Sucursal_Stock_Sucursales1_idx` (`ID_Sucursal` ASC) VISIBLE,
-  INDEX `fk_Producto_Sucursal_Stock_Productos1_idx` (`Codigo_de_barras` ASC) VISIBLE,
+  INDEX `fk_Producto_Sucursal_Stock_Sucursales1_idx` (`ID_Sucursal` ASC),
+  INDEX `fk_Producto_Sucursal_Stock_Productos1_idx` (`Codigo_de_barras` ASC),
   PRIMARY KEY (`Codigo_de_barras`, `ID_Sucursal`),
   CONSTRAINT `fk_Producto_Sucursal_Stock_Sucursales1`
     FOREIGN KEY (`ID_Sucursal`)
@@ -141,7 +132,6 @@ CREATE TABLE IF NOT EXISTS `petShop`.`Producto_Sucursal_Stock` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
