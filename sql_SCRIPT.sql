@@ -81,7 +81,6 @@ CREATE TABLE IF NOT EXISTS `Detalle_Ventas` (
   `Total_Item` DECIMAL(10,2) NOT NULL,
   INDEX `fk_Detalle_Ventas_Productos1_idx` (`Codigo_de_barras` ASC),
   INDEX `fk_Detalle_Ventas_Ventas1_idx` (`ID_Venta` ASC),
-  PRIMARY KEY (`ID_Venta`, `Codigo_de_barras`),
   CONSTRAINT `fk_Detalle_Ventas_Productos1`
     FOREIGN KEY (`Codigo_de_barras`)
     REFERENCES `Productos` (`Codigo_de_barras`)
