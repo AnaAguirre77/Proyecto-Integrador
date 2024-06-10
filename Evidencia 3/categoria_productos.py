@@ -1,4 +1,4 @@
-categorias = []
+from db import execute_query, fetch_query
 
 def gestionar_categorias():
     while True:
@@ -21,33 +21,44 @@ def gestionar_categorias():
             print("Opción inválida. Por favor, seleccione una opción válida.")
 
 def mostrar_categorias():
+    query = "SELECT ID_Categoria, Nombre, Descripcion FROM Categoria"
+    categorias = fetch_query(query)
     print("Categorías:")
     for categoria in categorias:
-        print(categoria)
+        print(f"ID: {categoria[0]}, Nombre: {categoria[1]}, Descripción: {categoria[2]}")
 
 def añadir_categoria():
     nombre = input("Ingrese el nombre de la categoría: ")
     descripcion = input("Ingrese la descripción de la categoría: ")
-    productos_categoria = []
-    while True:
-        añadir_producto_categoria = input("¿Desea añadir un producto a esta categoría? (s/n): ")
-        if añadir_producto_categoria.lower() == 's':
-            nombre_producto = input("Ingrese el nombre del producto: ")
-            descripcion_producto = input("Ingrese la descripción del producto: ")
-            producto = {"nombre": nombre_producto, "descripcion": descripcion_producto}
-            productos_categoria.append(producto)
-        else:
-            break
-    nueva_categoria = {"nombre": nombre, "descripcion": descripcion, "productos": productos_categoria}
-    categorias.append(nueva_categoria)
-    print("Categoría añadida correctamente.")
+
+    query = """
+    INSERT INTO Categoria (Nombre, Descripcion)
+    VALUES (%s, %s)
+    """
+    params = (nombre, descripcion)
+    
+    try:
+        execute_query(query, params)
+        print("Categoría añadida correctamente.")
+    except mysql.connector.Error as err:
+        print(f"Error al añadir categoría: {err}")
 
 def eliminar_categoria():
-    nombre = input("Ingrese el nombre de la categoría a eliminar: ")
-    for categoria in categorias:
-        if categoria["nombre"] == nombre:
-            categorias.remove(categoria)
-            print("Categoría eliminada correctamente.")
-            break
-    else:
-        print("No se encontró la categoría.")
+    id_categoria = input("Ingrese el ID de la categoría a eliminar: ")
+    
+    query_check = "SELECT COUNT(*) FROM Categoria WHERE ID_Categoria = %s"
+    params_check = (id_categoria,)
+    categoria_existe = fetch_query(query_check, params_check)[0][0]
+
+    if categoria_existe == 0:
+        print("Error: La categoría con el ID especificado no existe.")
+        return
+
+    query = "DELETE FROM Categoria WHERE ID_Categoria = %s"
+    params = (id_categoria,)
+    
+    try:
+        execute_query(query, params)
+        print("Categoría eliminada correctamente.")
+    except mysql.connector.Error as err:
+        print(f"Error al eliminar categoría: {err}")
