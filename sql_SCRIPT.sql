@@ -81,7 +81,6 @@ CREATE TABLE IF NOT EXISTS `Detalle_Ventas` (
   `Total_Item` DECIMAL(10,2) NOT NULL,
   INDEX `fk_Detalle_Ventas_Productos1_idx` (`Codigo_de_barras` ASC),
   INDEX `fk_Detalle_Ventas_Ventas1_idx` (`ID_Venta` ASC),
-  PRIMARY KEY (`ID_Venta`, `Codigo_de_barras`),
   CONSTRAINT `fk_Detalle_Ventas_Productos1`
     FOREIGN KEY (`Codigo_de_barras`)
     REFERENCES `Productos` (`Codigo_de_barras`)
@@ -115,7 +114,6 @@ CREATE TABLE IF NOT EXISTS `Producto_Sucursal_Stock` (
   `Cantidad_Stock` INT NOT NULL,
   INDEX `fk_Producto_Sucursal_Stock_Sucursales1_idx` (`ID_Sucursal` ASC),
   INDEX `fk_Producto_Sucursal_Stock_Productos1_idx` (`Codigo_de_barras` ASC),
-  PRIMARY KEY (`Codigo_de_barras`, `ID_Sucursal`),
   CONSTRAINT `fk_Producto_Sucursal_Stock_Sucursales1`
     FOREIGN KEY (`ID_Sucursal`)
     REFERENCES `Sucursales` (`ID_Sucursal`)
