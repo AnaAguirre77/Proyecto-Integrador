@@ -23,9 +23,9 @@ def create_connection():
     try:
         connection = mysql.connector.connect(
             host=config["host"],
-            user=config["user"],
-            passwd=config["passwd"],
-            database=config["database"]
+            user=config["usuario"],
+            passwd=config["pass"],
+            database=config["db"]
         )
     except Error as e:
         print(f"El error '{e}' ocurrió")
