@@ -52,11 +52,12 @@ ENGINE = InnoDB;
 -- Table `petShop`.`Proveedores`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `petShop`.`Proveedores` (
-  `CUIT_Proveedor` INT NOT NULL,
+  `ID_Proveedor` INT NOT NULL,
+  `CUIT` VARCHAR(45) NOT NULL,
   `Nombre` VARCHAR(45) NOT NULL,
   `Apellido` VARCHAR(45) NOT NULL,
   `Telefono` VARCHAR(25) NOT NULL,
-  PRIMARY KEY (`CUIT_Proveedor`))
+  PRIMARY KEY (`ID_Proveedor`))
 ENGINE = InnoDB;
 
 
@@ -165,7 +166,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `petShop`.`Pedido` (
   `ID-Pedido` INT NOT NULL,
   `Fecha` DATETIME NOT NULL,
-  `CUIT-Proveedor` INT NOT NULL,
+  `ID-Proveedor` INT NOT NULL,
   `Estado` VARCHAR(45) NOT NULL,
   `ID_Sucursal` INT NOT NULL,
   PRIMARY KEY (`ID-Pedido`),
