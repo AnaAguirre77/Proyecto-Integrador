@@ -96,7 +96,7 @@ Este es un sistema modularizado para gestionar sucursales, productos, ventas, pr
 Este archivo contiene el menú principal de la aplicación y las funcionalidades para gestionar las diferentes entidades.
 Es el punto de entrada principal para el sistema de control de stock. Su objetivo es proporcionar un menú interactivo que permite al usuario seleccionar diferentes opciones para gestionar sucursales, productos, ventas, proveedores, detalles de ventas y categorías de productos.
 
-- **menu_principal()**: Función para mostrar el menú principal y gestionar las diferentes entidades.
+**menu_principal()**: Función para mostrar el menú principal y gestionar las diferentes entidades.
 La función menu_principal() presenta un menú interactivo al usuario, donde se muestran varias opciones, y luego ejecuta la función correspondiente según la opción seleccionada por el usuario. Si el usuario elige la opción "7", el programa se cierra con un mensaje de despedida. Dirige las acciones del usuario a las funciones adecuadas para llevar a cabo la gestión.
 
 ### productos.py
@@ -131,13 +131,13 @@ Este archivo contiene las funciones para gestionar las sucursales.
 
 Este archivo contiene las funciones para gestionar las ventas.
 
-1. **`gestionar_ventas()`**: Esta función presenta un menú de opciones para gestionar las ventas. Las opciones incluyen mostrar ventas, añadir una nueva venta, eliminar una venta y volver al menú principal.
+**`gestionar_ventas()`**: Esta función presenta un menú de opciones para gestionar las ventas. Las opciones incluyen mostrar ventas, añadir una nueva venta, eliminar una venta y volver al menú principal.
 
-2. **`mostrar_ventas()`**: Esta función imprime en consola todas las ventas almacenadas en la lista `ventas`.
+**`mostrar_ventas()`**: Esta función imprime en consola todas las ventas almacenadas en la lista `ventas`.
 
-3. **`añadir_venta()`**: Permite al usuario ingresar los detalles de una nueva venta, como el ID del producto, ID de la sucursal, cantidad vendida, fecha y monto de la venta. Luego agrega estos detalles como un diccionario a la lista `ventas`.
+**`añadir_venta()`**: Permite al usuario ingresar los detalles de una nueva venta, como el ID del producto, ID de la sucursal, cantidad vendida, fecha y monto de la venta. Luego agrega estos detalles como un diccionario a la lista `ventas`.
 
-4. **`eliminar_venta()`**: Solicita al usuario el ID de la venta que desea eliminar. Luego busca esa venta en la lista `ventas` y la elimina si la encuentra.
+**`eliminar_venta()`**: Solicita al usuario el ID de la venta que desea eliminar. Luego busca esa venta en la lista `ventas` y la elimina si la encuentra.
 
 ### proveedores.py
 
@@ -155,13 +155,13 @@ Este archivo contiene las funciones para gestionar los proveedores.
 
 Este archivo contiene las funciones para gestionar el detalle de las ventas.
 
-- `gestionar_detalle_ventas()`: Esta función presenta un menú interactivo para gestionar el detalle de ventas. Permite al usuario elegir entre mostrar los detalles de ventas existentes, añadir un nuevo detalle de venta, eliminar un detalle de venta o volver al menú principal.
+**`gestionar_detalle_ventas()`**: Esta función presenta un menú interactivo para gestionar el detalle de ventas. Permite al usuario elegir entre mostrar los detalles de ventas existentes, añadir un nuevo detalle de venta, eliminar un detalle de venta o volver al menú principal.
 
-- `mostrar_detalle_ventas()`: Esta función imprime todos los detalles de ventas almacenados en la lista `detalle_ventas`.
+**`mostrar_detalle_ventas()`**: Esta función imprime todos los detalles de ventas almacenados en la lista `detalle_ventas`.
 
-- `añadir_detalle_venta()`: Esta función solicita al usuario ingresar información sobre un nuevo detalle de venta, como el ID de la venta, la cantidad de unidades, el precio unitario, el descuento, el total y el código de barras del producto. Luego, crea un diccionario con esta información y lo añade a la lista `detalle_ventas`.
+**`añadir_detalle_venta()`**: Esta función solicita al usuario ingresar información sobre un nuevo detalle de venta, como el ID de la venta, la cantidad de unidades, el precio unitario, el descuento, el total y el código de barras del producto. Luego, crea un diccionario con esta información y lo añade a la lista `detalle_ventas`.
 
-- `eliminar_detalle_venta()`: Esta función solicita al usuario ingresar el ID del detalle de venta que desea eliminar. Luego, busca este detalle de venta en la lista `detalle_ventas` y lo elimina si se encuentra.
+**`eliminar_detalle_venta()`**: Esta función solicita al usuario ingresar el ID del detalle de venta que desea eliminar. Luego, busca este detalle de venta en la lista `detalle_ventas` y lo elimina si se encuentra.
 
 La lista `detalle_ventas` actúa como una especie de "base de datos temporal" donde se almacenan los detalles de ventas. Sin embargo, ten en cuenta que esta implementación no persistirá los datos entre ejecuciones del programa; es decir, los detalles de ventas se perderán cuando el programa se cierre. Si deseas que los datos se conserven entre ejecuciones, necesitarás implementar algún tipo de almacenamiento persistente, como una base de datos.
 
@@ -169,26 +169,26 @@ La lista `detalle_ventas` actúa como una especie de "base de datos temporal" do
 
 Este archivo contiene las funciones que gestiona las categorías de los productos. Estas funciones permiten al usuario gestionar las categorías de productos de manera interactiva a través del menú principal del sistema de control de stock.
 
-- `gestionar_categorias()`: Esta función presenta un menú interactivo para gestionar las categorías de productos. Permite al usuario elegir entre mostrar las categorías existentes, añadir una nueva categoría, eliminar una categoría o volver al menú principal.
+**`gestionar_categorias()`**: Esta función presenta un menú interactivo para gestionar las categorías de productos. Permite al usuario elegir entre mostrar las categorías existentes, añadir una nueva categoría, eliminar una categoría o volver al menú principal.
 
-- `mostrar_categorias()`: Esta función ejecuta una consulta SQL para seleccionar todas las categorías de productos de la base de datos y luego imprime los detalles de cada categoría, incluyendo su ID, nombre y descripción.
+**`mostrar_categorias()`**: Esta función ejecuta una consulta SQL para seleccionar todas las categorías de productos de la base de datos y luego imprime los detalles de cada categoría, incluyendo su ID, nombre y descripción.
 
-- `añadir_categoria()`: Esta función solicita al usuario que ingrese el nombre y la descripción de la nueva categoría y luego ejecuta una consulta SQL para insertar la nueva categoría en la base de datos.
+**`añadir_categoria()`**: Esta función solicita al usuario que ingrese el nombre y la descripción de la nueva categoría y luego ejecuta una consulta SQL para insertar la nueva categoría en la base de datos.
 
-- `eliminar_categoria()`: Esta función solicita al usuario que ingrese el ID de la categoría que desea eliminar. Primero verifica si la categoría existe en la base de datos. Si existe, ejecuta una consulta SQL para eliminar la categoría correspondiente.
+**`eliminar_categoria()`**: Esta función solicita al usuario que ingrese el ID de la categoría que desea eliminar. Primero verifica si la categoría existe en la base de datos. Si existe, ejecuta una consulta SQL para eliminar la categoría correspondiente.
 
-- **gestionar_categorias()**: Función para gestionar las categorías de los productos.
+**gestionar_categorias()**: Función para gestionar las categorías de los productos.
 
 ### db.py
 Este archivo proporciona funciones para conectarse a una base de datos MySQL, ejecutar consultas SQL y recuperar resultados de consultas. Estas funciones son útiles para interactuar con una base de datos MySQL en el contexto de la aplicación de control de stock, permitiendo ejecutar consultas y recuperar datos de manera fácil y segura.
 
-- `config_bd()`: Esta función intenta leer la configuración de la base de datos desde un archivo JSON. Si el archivo no se encuentra o está mal formateado, se muestra un mensaje de error y la función devuelve `None`. En caso contrario, devuelve el diccionario de configuración.
+**`config_bd()`**: Esta función intenta leer la configuración de la base de datos desde un archivo JSON. Si el archivo no se encuentra o está mal formateado, se muestra un mensaje de error y la función devuelve `None`. En caso contrario, devuelve el diccionario de configuración.
 
-- `create_connection()`: Esta función utiliza la configuración de la base de datos obtenida de `config_bd()` para establecer una conexión con la base de datos MySQL. Si la conexión se establece correctamente, devuelve el objeto de conexión; de lo contrario, devuelve `None`.
+**`create_connection()`**: Esta función utiliza la configuración de la base de datos obtenida de `config_bd()` para establecer una conexión con la base de datos MySQL. Si la conexión se establece correctamente, devuelve el objeto de conexión; de lo contrario, devuelve `None`.
 
-- `execute_query(query, params=None)`: Esta función ejecuta una consulta SQL proporcionada como argumento `query`. También puede tomar parámetros opcionales `params` para consultas parametrizadas. Utiliza la función `create_connection()` para establecer una conexión con la base de datos y ejecuta la consulta. Si la ejecución es exitosa, confirma los cambios en la base de datos y muestra un mensaje de éxito; de lo contrario, muestra un mensaje de error.
+**`execute_query(query, params=None)`**: Esta función ejecuta una consulta SQL proporcionada como argumento `query`. También puede tomar parámetros opcionales `params` para consultas parametrizadas. Utiliza la función `create_connection()` para establecer una conexión con la base de datos y ejecuta la consulta. Si la ejecución es exitosa, confirma los cambios en la base de datos y muestra un mensaje de éxito; de lo contrario, muestra un mensaje de error.
 
-- `fetch_query(query, params=None)`: Esta función ejecuta una consulta SQL proporcionada como argumento `query` y devuelve todos los resultados. También puede tomar parámetros opcionales `params` para consultas parametrizadas. Utiliza la función `create_connection()` para establecer una conexión con la base de datos, ejecuta la consulta y devuelve los resultados. Si la ejecución es exitosa, devuelve los resultados; de lo contrario, devuelve `None`.
+**`fetch_query(query, params=None)`**: Esta función ejecuta una consulta SQL proporcionada como argumento `query` y devuelve todos los resultados. También puede tomar parámetros opcionales `params` para consultas parametrizadas. Utiliza la función `create_connection()` para establecer una conexión con la base de datos, ejecuta la consulta y devuelve los resultados. Si la ejecución es exitosa, devuelve los resultados; de lo contrario, devuelve `None`.
 
 
 
