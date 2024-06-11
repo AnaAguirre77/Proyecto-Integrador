@@ -165,8 +165,6 @@ Este archivo contiene las funciones para gestionar el detalle de las ventas.
 
 La lista `detalle_ventas` actúa como una especie de "base de datos temporal" donde se almacenan los detalles de ventas. Sin embargo, ten en cuenta que esta implementación no persistirá los datos entre ejecuciones del programa; es decir, los detalles de ventas se perderán cuando el programa se cierre. Si deseas que los datos se conserven entre ejecuciones, necesitarás implementar algún tipo de almacenamiento persistente, como una base de datos.
 
-- **gestionar_detalle_ventas()**: Función para gestionar el detalle de las ventas.
-
 ### categorias_productos.py
 
 Este archivo contiene las funciones que gestiona las categorías de los productos. Estas funciones permiten al usuario gestionar las categorías de productos de manera interactiva a través del menú principal del sistema de control de stock.
