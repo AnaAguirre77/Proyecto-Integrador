@@ -243,7 +243,7 @@ Actualiza la configuración de la base de datos en config.json con tu usuario y 
 Nuestra aplicación de tienda de mascotas ofrece varias funcionalidades para gestionar diferentes aspectos del negocio.  se describen las principales funciones y los archivos asociados:
 
 1. Menú Principal (index.py):**
-   - La función `menu_principal()` en el archivo `index.py` muestra el menú principal de la aplicación y permite gestionar las diferentes entidades, como productos, sucursales, ventas, proveedores, detalle de ventas y categorías de productos.
+La función `menu_principal()` en el archivo `index.py` muestra el menú principal de la aplicación y permite gestionar las diferentes entidades, como productos, sucursales, ventas, proveedores, detalle de ventas y categorías de productos.
 
 2. Gestión de Productos (productos.py):**
 La función `gestionar_productos()` en el archivo `productos.py` permite añadir, modificar, eliminar y visualizar información sobre los productos disponibles en la tienda.
