@@ -89,25 +89,25 @@ Para diseñar el menú principal y la primera interacción del usuario con el si
 
 Nuestra aplicación de tienda de mascotas ofrece varias funcionalidades para gestionar diferentes aspectos del negocio.  se describen las principales funciones y los archivos asociados:
 
-1. Menú Principal (index.py):**
+1. Menú Principal (index.py):
 La función `menu_principal()` en el archivo `index.py` muestra el menú principal de la aplicación y permite gestionar las diferentes entidades, como productos, sucursales, ventas, proveedores, detalle de ventas y categorías de productos.
 
-2. Gestión de Productos (productos.py):**
+2. Gestión de Productos (productos.py):
 La función `gestionar_productos()` en el archivo `productos.py` permite añadir, modificar, eliminar y visualizar información sobre los productos disponibles en la tienda.
 
-3. Gestión de Sucursales (sucursales.py):**
+3. Gestión de Sucursales (sucursales.py):
  La función `gestionar_sucursales()` en el archivo `sucursales.py` facilita la administración de las sucursales de la tienda, incluyendo la gestión de su información y ubicación.
 
-4. Gestión de Ventas (ventas.py):**
+4. Gestión de Ventas (ventas.py):
 La función `gestionar_ventas()` en el archivo `ventas.py` permite registrar nuevas ventas, así como gestionar y visualizar el historial de ventas realizadas en la tienda.
 
-5. Gestión de Proveedores (proveedores.py):**
+5. Gestión de Proveedores (proveedores.py):
 La función `gestionar_proveedores()` en el archivo `proveedores.py` ofrece herramientas para gestionar los proveedores de la tienda, incluyendo la adición, edición y eliminación de información de contacto y productos suministrados.
 
-6. **Gestión del Detalle de Ventas (detalle_ventas.py):**
+6. Gestión del Detalle de Ventas (detalle_ventas.py):
 La función `gestionar_detalle_ventas()` en el archivo `detalle_ventas.py` permite administrar el detalle de las ventas registradas, incluyendo la visualización de los productos vendidos y la cantidad asociada a cada venta.
 
-7. **Gestión de Categorías de Productos (categorias_productos.py):**
+7. Gestión de Categorías de Productos (categorias_productos.py):
  La función `gestionar_categorias()` en el archivo `categorias_productos.py` proporciona herramientas para gestionar las categorías de los productos vendidos en la tienda, incluyendo la creación, modificación y eliminación de categorías.
 
         
