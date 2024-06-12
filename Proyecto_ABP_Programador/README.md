@@ -217,6 +217,62 @@ Este archivo proporciona funciones para conectarse a una base de datos MySQL, ej
 **`fetch_query(query, params=None)`**: Esta función ejecuta una consulta SQL proporcionada como argumento `query` y devuelve todos los resultados. También puede tomar parámetros opcionales `params` para consultas parametrizadas. Utiliza la función `create_connection()` para establecer una conexión con la base de datos, ejecuta la consulta y devuelve los resultados. Si la ejecución es exitosa, devuelve los resultados; de lo contrario, devuelve `None`.
 
 
+## Contenido del Repositorio
+
+### `index.py`
+Este archivo actúa como punto de entrada de la aplicación. Contiene la función `menu_principal()` que muestra el menú principal de la aplicación, permitiendo la navegación hacia la gestión de productos, sucursales, ventas, proveedores, detalles de ventas y categorías de productos.
+
+### `productos.py`
+Gestiona la funcionalidad relacionada con los productos:
+- **`gestionar_productos()`**: Muestra un menú para la gestión de productos.
+- **`mostrar_productos()`**: Ejecuta una consulta SQL para mostrar todos los productos.
+- **`añadir_producto()`**: Permite añadir un nuevo producto a la base de datos.
+- **`eliminar_producto()`**: Permite eliminar un producto existente usando su código de barras.
+
+### `sucursales.py`
+Gestiona la funcionalidad relacionada con las sucursales:
+- **`gestionar_sucursales()`**: Muestra un menú para la gestión de sucursales.
+- **`ver_sucursales()`**: Ejecuta una consulta SQL para mostrar todas las sucursales.
+- **`agregar_sucursal()`**: Permite añadir una nueva sucursal.
+- **`actualizar_sucursal()`**: Actualiza los detalles de una sucursal existente.
+- **`eliminar_sucursal()`**: Permite eliminar una sucursal usando su ID.
+
+### `ventas.py`
+Gestiona la funcionalidad relacionada con las ventas:
+- **`gestionar_ventas()`**: Muestra un menú para la gestión de ventas.
+- **`mostrar_ventas()`**: Muestra todas las ventas registradas en la lista.
+- **`añadir_venta()`**: Permite añadir una nueva venta a la lista de ventas.
+- **`eliminar_venta()`**: Permite eliminar una venta usando su ID.
+
+### `proveedores.py`
+Gestiona la funcionalidad relacionada con los proveedores:
+- **`gestionar_proveedores()`**: Muestra un menú para la gestión de proveedores.
+- **`mostrar_proveedores()`**: Ejecuta una consulta SQL para mostrar todos los proveedores.
+- **`añadir_proveedor()`**: Permite añadir un nuevo proveedor a la base de datos.
+- **`eliminar_proveedor()`**: Permite eliminar un proveedor usando su CUIT.
+
+### `detalle_ventas.py`
+Gestiona el detalle de las ventas:
+- **`gestionar_detalle_ventas()`**: Muestra un menú para la gestión del detalle de ventas.
+- **`mostrar_detalle_ventas()`**: Muestra todos los detalles de ventas registrados en la lista.
+- **`añadir_detalle_venta()`**: Permite añadir un nuevo detalle de venta a la lista de detalles.
+- **`eliminar_detalle_venta()`**: Permite eliminar un detalle de venta usando su ID.
+
+### `categorias_productos.py`
+Gestiona la funcionalidad relacionada con las categorías de productos:
+- **`gestionar_categorias()`**: Muestra un menú para la gestión de categorías de productos.
+- **`mostrar_categorias()`**: Ejecuta una consulta SQL para mostrar todas las categorías de productos.
+- **`añadir_categoria()`**: Permite añadir una nueva categoría a la base de datos.
+- **`eliminar_categoria()`**: Permite eliminar una categoría usando su ID.
+
+### `db.py`
+Proporciona funciones para la interacción con la base de datos MySQL:
+- **`config_bd()`**: Lee la configuración de la base de datos desde un archivo JSON.
+- **`create_connection()`**: Establece una conexión con la base de datos MySQL usando la configuración proporcionada.
+- **`execute_query(query, params=None)`**: Ejecuta una consulta SQL en la base de datos.
+- **`fetch_query(query, params=None)`**: Ejecuta una consulta SQL y devuelve los resultados.
+
+
 
 ## Estructura de Archivos
 
