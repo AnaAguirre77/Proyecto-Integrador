@@ -312,7 +312,6 @@ pip
 
 Asegurate de tener un servidor de base de datos MySQL funcionamiento, se recomienda la version 8.0.
 Crea la base de datos y las tablas utilizando el script SQL proporcionado (sql_SCRIPT.sql).
-Actualiza la configuración de la base de datos en config.json con tu usuario y contraseña de acceso a la base de datos, o agregá el usuario adminps con contraseña adminps en cuentas de usuario.
 
 5. Ejecuta el script para insertar ejemplos de datos:
 
