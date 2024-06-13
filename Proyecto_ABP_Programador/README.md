@@ -45,6 +45,8 @@ Los usuarios podrán acceder al sistema para ver el inventario disponible en cad
 
 El sistema estará diseñado para ser fácil de usar y eficiente, permitiendo una gestión efectiva del inventario y asegurando que los productos estén disponibles cuando los clientes los necesiten.
 
+Link al video explicativo: https://drive.google.com/file/d/1GcTWInS-2dWCQBCxQppY_-5iO0bLm2wu/view?usp=sharing
+
 # Análisis y Diseño del Proyecto
 Para diseñar el menú principal y la primera interacción del usuario con el sistema de control de stock para la tienda de mascotas, es importante tener en cuenta varios aspectos. 
 
