@@ -267,6 +267,10 @@ Evidencia 3
 ├── detalle_ventas.py
 └── categorias_productos.py
 
+## Base de datos
+La estructura o esquema de nuestra base de datos consiste en 10 tablas, cada una con su clave primaria, relacionadas entre sí por medio de claves foráneas (representado en el diagrama "Crow's foot" en carpeta db). 
+Decidimos incluir un archivo .py que permite generar datos para cada tabla y le da vida al mismo esquema. Antes de utilizar el programa por primera vez, ese módulo "insertar_ejemplos.py" debe correr primero, para que luego estos datos puedan ser reflejados en la consola.
+
 # Requisitos
 
 Python 3.7+
