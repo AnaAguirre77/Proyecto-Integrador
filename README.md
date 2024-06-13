@@ -91,6 +91,7 @@ Para diseñar el menú principal y la primera interacción del usuario con el si
 
 El primer contacto con la aplicación es un menú principal que ofrece 8 funcionales relacionadas a: sucursales, productos, ventas, proveedores, clientes, empleados y categorías de producto. Accediendo a cada una de ellas se puede crear, consultar, actualizar y eliminar información de las diferentes categorías, manteniendo un sistema de información confiable, enfocado en hacer un control centralizado del stock.
 
+![image](https://github.com/AnaAguirre77/Proyecto-Integrador/assets/146685869/ff3ba1c4-ef21-4acb-b82d-0309666132dd)
         
 # Sistema de Control de Stock
 
