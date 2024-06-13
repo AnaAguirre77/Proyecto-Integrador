@@ -212,7 +212,7 @@ Este archivo proporciona funciones para conectarse a una base de datos MySQL, ej
 
 **`config_bd()`**: Esta función intenta leer la configuración de la base de datos desde un archivo JSON. Si el archivo no se encuentra o está mal formateado, se muestra un mensaje de error y la función devuelve `None`. En caso contrario, devuelve el diccionario de configuración.
 
-**`create_connection()`**: Esta función utiliza la configuración de la base de datos obtenida de `config_bd()` para establecer una conexión con la base de datos MySQL. Si la conexión se establece correctamente, devuelve el objeto de conexión; de lo contrario, devuelve `None`.
+**`crear_conexion()`**: Esta función utiliza la configuración de la base de datos obtenida de `config_bd()` para establecer una conexión con la base de datos MySQL. Si la conexión se establece correctamente, devuelve el objeto de conexión; de lo contrario, devuelve `None`.
 
 **`execute_query(query, params=None)`**: Esta función ejecuta una consulta SQL proporcionada como argumento `query`. También puede tomar parámetros opcionales `params` para consultas parametrizadas. Utiliza la función `create_connection()` para establecer una conexión con la base de datos y ejecuta la consulta. Si la ejecución es exitosa, confirma los cambios en la base de datos y muestra un mensaje de éxito; de lo contrario, muestra un mensaje de error.
 
