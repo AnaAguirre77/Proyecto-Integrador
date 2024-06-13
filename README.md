@@ -89,7 +89,7 @@ Para diseñar el menú principal y la primera interacción del usuario con el si
 
 ## Uso de la aplicación
 
-Nuestra aplicación de tienda de mascotas ofrece varias funcionalidades para gestionar diferentes aspectos del negocio.  se describen las principales funciones y los archivos asociados:
+Nuestra aplicación de tienda de mascotas ofrece varias funcionalidades para gestionar diferentes aspectos del negocio,  se describen las principales funciones y los archivos asociados:
 
 1. Menú Principal (index.py):
 La función `menu_principal()` en el archivo `index.py` muestra el menú principal de la aplicación y permite gestionar las diferentes entidades, como productos, sucursales, ventas, proveedores, detalle de ventas y categorías de productos.
