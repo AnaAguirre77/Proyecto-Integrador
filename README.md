@@ -1,4 +1,4 @@
-# Grupo 9
+
 
 # Datos del Grupo
 
